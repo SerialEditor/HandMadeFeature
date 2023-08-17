@@ -1,11 +1,12 @@
 html {
+  font-size: 10px;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetiсa', 'Arial', sans-serif;
-  font-size: 10px;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.2;
   background-color: #ffffff;
@@ -65,4 +66,8 @@ img {
   clip: rect(0, 0, 0, 0);
   clip-path: inset(100%);
   overflow: hidden;
+}
+
+.color--white {
+  color: #ffffff;
 }
