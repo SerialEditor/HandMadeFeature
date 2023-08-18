@@ -19,6 +19,7 @@
 
 .logo img {
   vertical-align: bottom;
+  border-radius: 0;
 }
 
 .navigation__list {
