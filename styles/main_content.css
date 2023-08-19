@@ -55,8 +55,7 @@ h3 {
 
 .advantages__samples-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
+  gap: 10px;
 }
 
 .outer-container {
@@ -176,8 +175,6 @@ h3 {
 .feedback {
   background: url('../files/feedback-bg.png') no-repeat center center;
   background-size: cover;
-  margin-bottom: 20px;
-  padding: 70px 20px;
 }
 
 .feedback p {
@@ -239,6 +236,46 @@ h3 {
 
 .rule-wrapper:last-child::before {
   background-image: url('../images/section7_6.png');
+}
+
+@media screen and (min-width: 480px) {
+  .advantages__samples-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .bounding-container > ul, .about .bounding-container > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .bounding-container > ul > li:last-child, .about img {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .bounding-container > ul, .about .bounding-container > div {
+    gap: 20px;
+  }
+
+  .advantages__samples-wrapper {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .bounding-container {
+    width: calc(100vw - 40px);
+  }
+
+  .bounding-container > ul, .about .bounding-container > div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .bounding-container > ul > li:last-child, .about img {
+    grid-column: span 1;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
