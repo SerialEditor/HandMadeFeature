@@ -4,32 +4,45 @@ section:nth-of-type(2n) {
 }
 
 h2,
-h3 {
+h3,
+dt {
   font-family: 'Cormorant', 'Georgia', serif;
   text-transform: uppercase;
 }
 
 h2 {
+  margin-bottom: 45px;
   font-size: 2.6rem;
   font-weight: 500;
   line-height: 1;
   text-align: center;
 }
 
-h3 {
+h3,
+dt {
   font-size: 1.7rem;
-  line-height: 1.2;
   font-weight: 700;
+  line-height: 1.2;
 }
 
-p {
+h3 {
+  margin-bottom: 25px;
+}
+
+p,
+dd {
   font-family: 'Inter', 'Helvetiсa', 'Arial', sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.3;
 }
 
-a, button {
+* p:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+a,
+button {
   font-family: 'Inter', 'Helvetiсa', 'Arial', sans-serif;
   font-size: 1.6rem;
   line-height: 1.2;
@@ -43,39 +56,47 @@ img {
   width: calc(100vw - 20px);
   max-width: 1160px;
   margin: 0 auto;
+  padding: 70px 0;
 }
 
 .promo .bounding-container {
   display: grid;
+  padding-top: 0;
 }
 
 .promo h2 {
+  margin-bottom: 15px;
   line-height: 1;
   letter-spacing: -0.9px;
 }
 
 .promo p {
+  width: 80cqw;
+  justify-self: center;
+  margin-bottom: 20px;
   text-align: center;
 }
 
+/* Вопрос по высоте изображения */
 .promo img {
   order: -1;
   width: 100%;
-  border-radius: 13px;
+  margin-bottom: 20px;
 }
 
 .promo__links-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
+  max-width: max-content;
+  margin: 0 auto;
   color: #ffffff;
-} 
-/* проработать сетку */
+}
 
 .button-appearance {
   width: 280px;
   box-sizing: border-box;
+  margin: 0 auto;
   padding: 31px 5px;
   font-weight: 500;
   text-align: center;
@@ -86,9 +107,37 @@ img {
   box-shadow: inset 0px -4px 15px 10px rgba(0, 0, 0, 0.52);
 }
 
+.promo__links-wrapper .button-appearance {
+  flex-shrink: 0;
+}
+
+.rebuilding-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.advantages .rebuilding-grid {
+  margin-bottom: 10px;
+}
+
+.advantages li,
+.services li {
+  box-sizing: border-box;
+  border: 1px solid #9f8260;
+  border-radius: 12px;
+}
+
+.advantages li {
+  padding: 40px 16px;
+}
+
 .advantages__samples-wrapper {
   display: grid;
   gap: 10px;
+}
+
+.services li {
+  padding: 45px 16px 40px;
 }
 
 .outer-container {
@@ -197,16 +246,29 @@ img {
 }
 
 /* Fifth section starting */
-.materials-description__item {
-  display: grid;
-  margin-bottom: 20px;
+.materials-description__list.rebuilding-grid {
+  gap: 35px;
 }
 
-.materials-description__list img {
+.materials-description__item {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+li.materials-description__item > * {
+  margin-bottom: 0;
+}
+
+.materials-description__item img {
   order: -1;
 }
 
-.wood-description-link {
+.wood-description__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.wood-description__link {
   padding-right: 11px;
   font-weight: 500;
   text-decoration: underline;
@@ -219,25 +281,26 @@ img {
   background-size: cover;
 }
 
+.feedback h2 {
+  margin-bottom: 25px;
+}
+
 .feedback p {
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .feedback .button-appearance {
   display: block;
-  margin: 0 auto;
   background-color: #0a2338;
 }
 
 /* Seven section starting */
-.rules h3, .rules p {
-  text-align: center;
-}
-
 .rules__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+  text-align: center;
 }
 
 .rule-wrapper {
@@ -245,11 +308,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 290px;
-  padding: 30px 5px 25px;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 30px 16px;
   border: 1px solid #9f8260;
   border-radius: 12px;
-  text-align: center;
 }
 
 .rule-wrapper::before {
@@ -284,29 +347,107 @@ img {
   background-image: url('../images/section7_6.png');
 }
 
+.rules__list dt {
+  margin-bottom: 11px;
+}
+
+.about .rebuilding-grid {
+  gap: 25px;
+}
+
 @media screen and (min-width: 480px) {
+  .bounding-container {
+    padding: 80px 0;
+  }
+
+  /* Спорный момент */
+  h2 {
+    margin-bottom: 35px;
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.9rem;
+  }
+
   .advantages__samples-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .bounding-container > ul, .about .bounding-container > div {
+  .rebuilding-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rebuilding-grid > *:last-child {
+    grid-column: span 2;
+  }
+
+  .materials-description__list.rebuilding-grid {
+    column-gap: 10px;
+    row-gap: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  .materials-description__item:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-areas:
+      'title image'
+      'description-1 image'
+      'description-2 image'
+      'description-2 image';
+    column-gap: 10px;
+    row-gap: 20px;
   }
-  
-  .bounding-container > ul > li:last-child, .about img {
-    grid-column: span 2;
+
+  .materials-description__item:last-child h3 {
+    grid-area: title;
+  }
+
+  .materials-description__item:last-child img {
+    grid-area: image;
+    order: 0;
+    height: 70cqw;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .materials-description__item:last-child p:first-of-type {
+    grid-area: description-1;
+  }
+
+  .materials-description__item:last-child p:last-of-type {
+    grid-area: description-2;
   }
 }
 
 @media screen and (min-width: 640px) {
-  .bounding-container > ul, .about .bounding-container > div {
+  h3 {
+    font-size: 2.3rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .promo p {
+    width: 75cqw;
+  }
+
+  .bounding-container > ul,
+  .about .bounding-container > div {
     gap: 20px;
   }
 
   .advantages__samples-wrapper {
     gap: 20px;
+  }
+
+  .materials-description__item:last-child {
+    column-gap: 30px;
+    row-gap: 36px;
   }
 }
 
@@ -315,11 +456,13 @@ img {
     width: calc(100vw - 40px);
   }
 
-  .bounding-container > ul, .about .bounding-container > div {
+  .bounding-container > ul,
+  .about .bounding-container > div {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
-  .bounding-container > ul > li:last-child, .about img {
+
+  .bounding-container > ul > li:last-child,
+  .about img {
     grid-column: span 1;
   }
 }
