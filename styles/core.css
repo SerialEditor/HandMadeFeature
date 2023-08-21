@@ -5,11 +5,8 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Helvetiсa', 'Arial', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.2;
-  background-color: #ffffff;
+  color: #000000;
+  background-color: #f3f1ef;
 }
 
 ul,
@@ -19,13 +16,9 @@ ol {
   list-style-type: none;
 }
 
-dl,
+h2, h3, p, dl,
 dd {
   margin: 0;
-}
-
-h2, h3, p {
-  margin-top: 0;
 }
 
 a {
@@ -57,7 +50,6 @@ button:focus {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
 }
 
 .visually-hidden {

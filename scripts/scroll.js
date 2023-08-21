@@ -3,7 +3,7 @@
 let container = document.querySelector('.outer-container');
 let scrollElems = container.querySelectorAll('.samples-item');
 let firstScrollElems = container.querySelectorAll('.samples-item:first-child');
-let tabScrollButtons = document.querySelectorAll('.tab-scroll-btn');
+let tabScrollButtons = document.querySelectorAll('.sample-list-scroll-btn');
 let elemScrollButtonBack = document.querySelector('.scroll__btn--left');
 let elemScrollButtonForward = document.querySelector('.scroll__btn--right');
 
