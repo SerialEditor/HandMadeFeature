@@ -66,7 +66,6 @@ img {
 
 .promo h2 {
   margin-bottom: 15px;
-  line-height: 1;
   letter-spacing: -0.9px;
 }
 
@@ -137,7 +136,7 @@ img {
 }
 
 .services li {
-  padding: 45px 16px 40px;
+  padding: 40px 16px;
 }
 
 .outer-container {
@@ -152,6 +151,9 @@ img {
 }
 
 .samples p {
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -195,7 +197,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .sample-list-scroll-btns {
@@ -272,7 +274,7 @@ li.materials-description__item > * {
   padding-right: 11px;
   font-weight: 500;
   text-decoration: underline;
-  background: url('../images/wood_description_link_bg.png') no-repeat right 6px;
+  background: url('../images/wood_description_link_bg.svg') no-repeat right 6px;
 }
 
 /* Sixth section starting */
@@ -286,6 +288,8 @@ li.materials-description__item > * {
 }
 
 .feedback p {
+  max-width: 540px;
+  margin: 0 auto;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -324,27 +328,27 @@ li.materials-description__item > * {
 }
 
 .rule-wrapper:first-child::before {
-  background-image: url('../images/section7_1.png');
+  background-image: url('../images/section7_1.svg');
 }
 
 .rule-wrapper:nth-child(2)::before {
-  background-image: url('../images/section7_2.png');
+  background-image: url('../images/section7_2.svg');
 }
 
 .rule-wrapper:nth-child(3)::before {
-  background-image: url('../images/section7_3.png');
+  background-image: url('../images/section7_3.svg');
 }
 
 .rule-wrapper:nth-child(4)::before {
-  background-image: url('../images/section7_4.png');
+  background-image: url('../images/section7_4.svg');
 }
 
 .rule-wrapper:nth-child(5)::before {
-  background-image: url('../images/section7_5.png');
+  background-image: url('../images/section7_5.svg');
 }
 
 .rule-wrapper:last-child::before {
-  background-image: url('../images/section7_6.png');
+  background-image: url('../images/section7_6.svg');
 }
 
 .rules__list dt {
@@ -386,9 +390,13 @@ li.materials-description__item > * {
     column-gap: 10px;
     row-gap: 40px;
   }
+
+  .about img {
+    width: 100cqw;
+  }
 }
 
-@media screen and (min-width: 480px) and (max-width: 640px) {
+@media screen and (min-width: 480px) and (max-width: 959px) {
   .materials-description__item:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -409,7 +417,7 @@ li.materials-description__item > * {
     grid-area: image;
     order: 0;
     height: 70cqw;
-    max-height: 100%;
+    max-height: 440px;
     object-fit: cover;
   }
 
@@ -423,37 +431,84 @@ li.materials-description__item > * {
 }
 
 @media screen and (min-width: 640px) {
-  h3 {
+  h2 {
+    font-size: 3rem;
+    line-height: 1.15;
+    /* margin-bottom: 42px; */
+  }
+
+  h3,
+  dt {
     font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 1.1;
   }
 
-  p {
+  p,
+  dd {
     font-size: 1.7rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
-  .promo p {
+  .promo p,
+  .samples p,
+  .feedback p {
     width: 75cqw;
   }
 
+  .promo p,
+  .samples p {
+    margin-bottom: 30px;
+  }
+
   .bounding-container > ul,
+  .advantages__samples-wrapper,
+  .rules__list {
+    gap: 20px;
+  }
+
+  .advantages .rebuilding-grid {
+    margin-bottom: 20px;
+  }
+
+  .materials-description__list.rebuilding-grid {
+    column-gap: 20px;
+  }
+
+  .materials-description__item:last-child,
   .about .bounding-container > div {
-    gap: 20px;
-  }
-
-  .advantages__samples-wrapper {
-    gap: 20px;
-  }
-
-  .materials-description__item:last-child {
     column-gap: 30px;
     row-gap: 36px;
+  }
+
+  .feedback h2 {
+    margin-bottom: 48px;
+  }
+
+  .feedback p {
+    margin-bottom: 60px;
+  }
+
+  .rule-wrapper::before {
+    margin-bottom: 20px;
+  }
+
+  .rules__list dt {
+    margin-bottom: 26px;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .bounding-container {
+  /* .bounding-container {
     width: calc(100vw - 40px);
+  } */
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  h3, dt {
+    font-size: 2.6rem;
   }
 
   .bounding-container > ul,
@@ -461,8 +516,7 @@ li.materials-description__item > * {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .bounding-container > ul > li:last-child,
-  .about img {
+  .rebuilding-grid > *:last-child {
     grid-column: span 1;
   }
 }
@@ -475,6 +529,7 @@ li.materials-description__item > * {
   .item-scroll-btns {
     display: flex;
     gap: 20px;
+    margin: 0 auto;
   }
 
   .item-scroll-btn:hover {
