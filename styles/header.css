@@ -57,12 +57,12 @@
   left: 50%;
   width: 40px;
   height: 2px;
-  background-color: #ab74de;
+  background-color: #474444;
 }
 
 .toggler--off::before,
 .toggler--off::after {
-  box-shadow: 0 -12px 0 0 #ab74de, 0 12px 0 0 #ab74de;
+  box-shadow: 0 -12px 0 0 #474444, 0 12px 0 0 #474444;
   transform: translate(-50%, -50%);
   transition: transform 0.4s ease, box-shadow 0.4s ease 0.4s;
 }

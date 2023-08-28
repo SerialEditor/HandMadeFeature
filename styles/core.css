@@ -16,7 +16,7 @@ ol {
   list-style-type: none;
 }
 
-h2, h3, p, dl,
+h2, h3, h4, p, dl,
 dd {
   margin: 0;
 }
@@ -63,4 +63,8 @@ img {
   clip: rect(0, 0, 0, 0);
   clip-path: inset(100%);
   overflow: hidden;
+}
+
+.overflow--hidden {
+  overflow-y: hidden;
 }
