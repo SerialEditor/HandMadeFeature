@@ -100,7 +100,7 @@ img {
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
-  background-color: #2e6797;
+  background-color: #174a74;
   border: 1px solid #9f8260;
   border-radius: 12px;
   box-shadow: inset 0px -4px 15px 10px rgba(0, 0, 0, 0.52);
@@ -113,6 +113,10 @@ img {
 .rebuilding-grid {
   display: grid;
   gap: 10px;
+}
+
+.advantages {
+  text-align: center;
 }
 
 .advantages .rebuilding-grid {
@@ -137,6 +141,10 @@ img {
 .advantages__samples-wrapper {
   display: grid;
   gap: 10px;
+}
+
+.services {
+  text-align: center;
 }
 
 .services li {
@@ -253,6 +261,10 @@ img {
 }
 
 /* Fifth section starting */
+.materials-description h3 {
+  text-align: center;
+}
+
 .materials-description__list.rebuilding-grid {
   gap: 35px;
 }
@@ -571,7 +583,7 @@ li.materials-description__item > * {
 @media (hover: hover) and (pointer: fine) {
   .promo__links-wrapper .button-appearance:hover,
   .feedback .button-appearance:hover {
-    background-color: #174a74;
+    background-color: #2e6797;
   }
 
   .sample-list-scroll-btn:hover {
@@ -589,3 +601,5 @@ li.materials-description__item > * {
     background-color: #63605d;
   }
 }
+
+/* Кнопки скролла элементов уменьшить в 2 раза, сместить блок с кнопками вправо, отступ такой же как сверху, */
