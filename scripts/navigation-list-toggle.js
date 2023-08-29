@@ -1,10 +1,10 @@
 'use strict';
 
-let navList = document.querySelector('.navigation__list');
-let navListToggler = document.querySelector('.navigation__button-toggle');
+let menu = document.querySelector('.menu__inner-wrapper');
+let menuToggler = document.querySelector('.menu-button-toggle');
 
-navListToggler.addEventListener('click', () => {
-  navList.classList.toggle('navigation__list--showed');
-  navListToggler.classList.toggle('toggler--off');
-  navListToggler.classList.toggle('toggler--on');
+menuToggler.addEventListener('click', () => {
+  menu.classList.toggle('menu--showed');
+  menuToggler.classList.toggle('toggler--off');
+  menuToggler.classList.toggle('toggler--on');
 });

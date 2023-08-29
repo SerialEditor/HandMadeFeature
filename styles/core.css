@@ -22,8 +22,10 @@ dd {
 }
 
 a {
+  text-align: center;
   color: inherit;
   text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
