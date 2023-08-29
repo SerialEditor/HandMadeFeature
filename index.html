@@ -26,7 +26,7 @@
               <a href="#services" class="navigation__link">Услуги</a>
             </li>
             <li class="navigation__item">
-              <a href="#work" class="navigation__link current">Наши работы</a>
+              <a href="#samples" class="navigation__link">Наши работы</a>
             </li>
             <li class="navigation__item">
               <a href="#materials" class="navigation__link">Материалы</a>
@@ -44,7 +44,7 @@
         </button>
       </nav>
     </header>
-    <section class="promo">
+    <section class="promo" id="main">
       <div class="bounding-container">
         <h2>Мастерская «Комфортный дом»</h2>
         <p>
@@ -80,7 +80,9 @@
             </p>
           </li>
           <li>
-            <h3>Более <span class="reverted-font">25 лет</span> опыта работы</h3>
+            <h3>
+              Более <span class="reverted-font">25 лет</span> опыта работы
+            </h3>
             <p>
               В нашем штате работают опытные столяры и монтажники, что позволит
               вам наслаждаться долговечностью ваших изделий многие годы.
@@ -110,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="bounding-container">
         <h2>Услуги, которые мы предоставляем</h2>
         <ul class="rebuilding-grid">
@@ -137,7 +139,7 @@
         </ul>
       </div>
     </section>
-    <section class="samples">
+    <section class="samples" id="samples">
       <div class="bounding-container">
         <h2>Оцените работы, созданные нами</h2>
         <p>
@@ -294,7 +296,7 @@
         </div>
       </div>
     </section>
-    <section class="materials-description">
+    <section class="materials-description" id="materials">
       <div class="bounding-container">
         <h2>Материалы, с которыми мы работаем</h2>
         <ul class="materials-description__list rebuilding-grid">
@@ -623,7 +625,7 @@
         </dl>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="bounding-container">
         <h2>О нашей мастерской</h2>
         <div class="rebuilding-grid">
@@ -664,7 +666,34 @@
       <span class="visually-hidden">Наверх</span>
     </button>
     <footer>
-      <div class="bounding-container"></div>
+      <div class="bounding-container">
+        <a class="footer__logo">
+          <img
+            src="./images/logo.svg"
+            width="321"
+            height="67"
+            alt="Мебель ручной работы"
+          />
+        </a>
+        <dl>
+          <dt>Ссылки</dt>
+          <dd>
+            <a class="footer__navigation-link" href="#main">На главную</a>
+            <a class="footer__navigation-link" href="#services">Услуги</a>
+            <a class="footer__navigation-link" href="#samples">Наши работы</a>
+            <a class="footer__navigation-link" href="#materials"
+              >О материалах</a
+            >
+            <a class="footer__navigation-link" href="#about">О мастерской</a>
+          </dd>
+          <dt>Контакты</dt>
+          <dd>
+            <a href="tel:+79999999999">+7(999)999-99-99</a>
+          </dd>
+          <dt>Информация</dt>
+          <dd>Разработка дизайна Арестова Оксана</dd>
+        </dl>
+      </div>
     </footer>
     <script src="./scripts/navigation-list-toggle.js"></script>
     <script src="./scripts/scroll.js"></script>
