@@ -54,8 +54,8 @@ img {
 }
 
 .bounding-container {
-  width: calc(100vw - 20px);
-  max-width: 1160px;
+  width: calc(100vw - 40px);
+  max-width: 1850px;
   margin: 0 auto;
   padding: 70px 0;
 }
@@ -378,12 +378,12 @@ li.materials-description__item > * {
 .button-up {
   position: fixed;
   right: 10px;
-  top: 85vh;
+  bottom: 50px;
   width: 48px;
   height: 48px;
   border: 3px solid white;
   border-radius: 50%;
-  background-color: #2e6797;
+  background-color: rgba(46, 104, 151, 0.7);
   cursor: pointer;
   transform: scale(0);
   transition: 0.25s;
@@ -546,6 +546,14 @@ li.materials-description__item > * {
     grid-column: span 1;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .promo {
+    padding-top: 110px;
+  }
+} 
+  
+
 
 @media (hover: hover) and (pointer: fine) {
   .promo__links-wrapper .button-appearance:hover,
