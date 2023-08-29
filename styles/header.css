@@ -40,6 +40,14 @@
   text-transform: uppercase;
 }
 
+.page-header__phone {
+  display: inline-block;
+  padding: 15px 24px;
+  text-transform: uppercase;
+  border: 1px solid #9f8260;
+  border-radius: 12px;
+}
+
 .navigation__button-toggle {
   position: absolute;
   top: 50%;
@@ -140,5 +148,13 @@
 
   .navigation__item {
     margin-bottom: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-header__phone:hover {
+    color: #ffffff;
+    background-color: #5088b6;
+    box-shadow: inset 0px -4px 15px 10px rgba(0, 0, 0, 0.5);
   }
 }
