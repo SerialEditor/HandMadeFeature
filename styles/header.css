@@ -15,7 +15,6 @@
 .logo {
   width: calc(100% - 68px);
   max-width: 321px;
-  margin-right: 20px;
 }
 
 .logo img {
@@ -76,6 +75,18 @@
 
 .navigation__button-toggle.toggler--on::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.phone {
+  flex-shrink: 0;
+  display: none;
+  width: 200px;
+  line-height: 51px;
+  border: 1px solid #9F8260;
+  border-radius: 12px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 767px) {
@@ -141,4 +152,20 @@
   .navigation__item {
     margin-bottom: 0;
   }
+
+  .phone {
+    display: block;
+  }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1172px) {
+  .logo {
+    margin-right: auto;
+  }
+
+  .navigation__wrapper {
+    order: 1;
+  }
+}
+
+
