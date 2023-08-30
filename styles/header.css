@@ -40,6 +40,7 @@
 }
 
 .page-header__phone {
+  flex-shrink: 0;
   padding: 15px 24px;
   border: 1px solid #9f8260;
   border-radius: 12px;
@@ -128,18 +129,49 @@
     display: none;
   }
 
+  .logo {
+    position: absolute;
+  }
+
+  .menu {
+    flex-grow: 1;
+  }
+
   .menu__inner-wrapper {
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
+    align-items: stretch;
+    padding: 7px 0;
   }
 
   .navigation {
+    display: flex;
     flex-grow: 1;
   }
 
   .navigation__list {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .page-header__phone {
+    order: -1;
+    margin-left: auto;
+  }
+}
+
+@media screen and (width >= 1212px) {
+  .logo {
+    position: static;
+  }
+
+  .menu__inner-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-header__phone {
+    order: 0;
   }
 }
 
