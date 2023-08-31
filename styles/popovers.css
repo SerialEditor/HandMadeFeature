@@ -13,7 +13,7 @@
     z-index: 2;
     left: 50%;
     top: 50%;
-    width: 80vw;
+    width: 70vw;
     max-width: max-content;
     height: fit-content;
     max-height: 80vh;
@@ -74,13 +74,6 @@
     .material_image {
         order: 1;
         grid-row: span 3;
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .popover-content-wrapper {
-        padding-top: 0;
-        overflow-y: auto;
     }
 }
 
