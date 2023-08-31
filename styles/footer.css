@@ -9,11 +9,6 @@
     padding: 40px 0;
 }
 
-.page-footer__logo img {
-    vertical-align: bottom;
-    border-radius: 0;
-}
-
 .page-footer__content-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

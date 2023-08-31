@@ -11,12 +11,12 @@
   padding: 10px 0;
 }
 
-.logo {
+.page-header__logo {
   width: calc(100% - 68px);
   max-width: max-content;
 }
 
-.logo img {
+.logo-img {
   vertical-align: bottom;
   border-radius: 0;
 }
@@ -139,7 +139,7 @@
     grid-template-rows: 0 auto;
   }
 
-  .logo {
+  .page-header__logo {
     z-index: 1;
     width: max-content;
   }
