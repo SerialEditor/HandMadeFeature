@@ -123,10 +123,6 @@ img {
   padding: 40px 16px;
 }
 
-.reverted-font {
-  font-family: 'Times New Roman', Times, serif;
-}
-
 .advantages__samples-wrapper {
   display: grid;
   gap: 10px;
