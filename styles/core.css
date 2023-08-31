@@ -1,24 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   color: #000000;
   background-color: #f3f1ef;
 }
 
 ul,
 ol {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
-}
-
-h2, h3, h4, p, dl,
-dd {
-  margin: 0;
 }
 
 a {
