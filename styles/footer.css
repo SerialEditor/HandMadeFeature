@@ -16,7 +16,7 @@
 
 .page-footer__content-list {
     display: grid;
-    gap: 15px;
+    gap: 20px;
 }
 
 .page-footer__content-list dt {
@@ -34,7 +34,7 @@
     margin-bottom: 10px;
 }
 
-.footer__navigation-link:last-child {
+.page-footer__navigation-link:last-child {
     margin-bottom: 0;
 }
 
@@ -50,6 +50,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .page-footer .bounding-container {
+        gap: 20px;
+    }
+    
     .page-footer__content-list {
         grid-template-columns: repeat(3, 1fr);
     }
