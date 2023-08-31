@@ -549,8 +549,9 @@ li.materials-description__item > * {
 
 @media screen and (min-width: 1024px) {
   section {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 50px;
   }
+
   .promo {
     padding-top: 110px;
   }
