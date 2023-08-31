@@ -18,10 +18,16 @@ ol {
   list-style-type: none;
 }
 
-a {
+a, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
   color: inherit;
-  text-decoration: none;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -29,14 +35,10 @@ button {
   -moz-appearance: none;
   appearance: none;
   box-sizing: content-box;
-  font-family: inherit;
-  padding: 0;
-  color: inherit;
   background-color: transparent;
   border: none;
   border-radius: 0;
   outline: none;
-  cursor: pointer;
 }
 
 a:focus,
