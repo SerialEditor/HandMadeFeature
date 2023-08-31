@@ -5,7 +5,7 @@
 .page-footer .bounding-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 40px 0;
 }
 
@@ -16,7 +16,17 @@
 
 .page-footer__content-list {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: dense;
     gap: 20px;
+}
+
+.page-footer__content-list div:first-child {
+    grid-row: span 2;
+}
+
+.page-footer__content-list div:last-child {
+    align-self: end;
 }
 
 .page-footer__content-list dt {
@@ -26,11 +36,21 @@
     line-height: 1;
 }
 
-.page-footer__navigation-link {
-    position: relative;
+.page-footer__content-list div:last-child dd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page-footer a {
     display: block;
+    position: relative;
     width: fit-content;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-footer__navigation-link {
     margin-bottom: 10px;
 }
 
@@ -38,29 +58,19 @@
     margin-bottom: 0;
 }
 
-.footer__navigation-link::after {
+.page-footer a::after {
     content: "";
     position: absolute;
     top: 100%;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: #000000;
     transition: width .25s linear;
 }
 
-@media screen and (min-width: 480px) {
-    .page-footer .bounding-container {
-        gap: 20px;
-    }
-    
-    .page-footer__content-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (hover: hover) and (pointer: fine) {
-    .page-footer__navigation-link:hover::after {
+    .page-footer a:hover::after {
         width: 100%;
     }
 }

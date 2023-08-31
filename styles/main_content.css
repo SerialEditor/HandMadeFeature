@@ -44,8 +44,8 @@ h3 {
 a,
 button {
   font-family: inherit;
-  font-size: 1.6rem;
-  line-height: 1.2;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 img {
