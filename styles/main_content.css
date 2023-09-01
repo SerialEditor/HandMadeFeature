@@ -45,13 +45,6 @@ img {
   border-radius: 12px;
 }
 
-.bounding-container {
-  width: calc(100vw - 40px);
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 70px 0;
-}
-
 .promo .bounding-container {
   display: grid;
   padding-top: 0;

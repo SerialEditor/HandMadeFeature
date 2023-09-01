@@ -3,11 +3,11 @@
   background-color: #ffffff;
 }
 
-.page-header__bounding-container {
+.page-header .bounding-container {
   display: grid;
-  width: calc(100% - 20px);
-  max-width: 2560px;
-  margin: 0 auto;
+  /* width: calc(100% - 40px);
+  max-width: 1800px;
+  margin: 0 auto; */
   padding: 10px 0;
 }
 
@@ -50,7 +50,7 @@
 .menu-button-toggle {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 20px;
   width: 48px;
   height: 48px;
   transform: translateY(-50%);
@@ -135,7 +135,7 @@
     display: none;
   }
 
-  .page-header__bounding-container {
+  .page-header .bounding-container {
     grid-template-rows: 0 auto;
   }
 

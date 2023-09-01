@@ -51,6 +51,13 @@ img {
   height: auto;
 }
 
+.bounding-container {
+  width: calc(100vw - 40px);
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
