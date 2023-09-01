@@ -64,7 +64,7 @@
     transition: width .25s linear;
 }
 
-@media screen and (width >= 1001px) {
+@media screen and (width >= 1024px) {
     .page-footer .bounding-container {
         flex-direction: row;
         justify-content: space-between;
