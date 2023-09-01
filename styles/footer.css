@@ -64,6 +64,25 @@
     transition: width .25s linear;
 }
 
+@media screen and (width >= 1001px) {
+    .page-footer .bounding-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: calc((100% - 961px) / 3);
+    }
+
+    .page-footer__logo {
+        flex: 0 0 321px;
+    }
+
+    .page-footer__content-list {
+        width: calc(100% - 341px);
+        grid-template-columns: repeat(3, 200px);
+        justify-content: space-between;
+        padding-top: 1em;
+    }
+}
+
 @media (hover: hover) and (pointer: fine) {
     .page-footer a:hover::after {
         width: 100%;
