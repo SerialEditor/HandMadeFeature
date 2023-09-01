@@ -2,7 +2,7 @@ body {
   font-family: 'Inter', 'Helvetiсa', 'Arial', sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.45;
 }
 
 section:nth-of-type(2n) {
@@ -20,7 +20,7 @@ dt {
 
 h2 {
   margin-bottom: 45px;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 500;
   line-height: 1;
   text-align: center;
@@ -234,7 +234,6 @@ img {
   background-image: url('../images/scroll_btn_rigth_bg.svg');
 }
 
-/* Fifth section starting */
 .materials-description__list.rebuilding-grid {
   gap: 35px;
 }
@@ -264,7 +263,6 @@ li.materials-description__item > * {
   background: url('../images/wood_description_link_bg.svg') no-repeat right 6px;
 }
 
-/* Sixth section starting */
 .feedback {
   background: url('../files/feedback-bg.png') no-repeat center center;
   background-size: cover;
@@ -286,7 +284,6 @@ li.materials-description__item > * {
   background-color: #0a2338;
 }
 
-/* Seven section starting */
 .rules__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -396,7 +393,7 @@ li.materials-description__item > * {
 
   h2 {
     margin-bottom: 35px;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
   h3 {
@@ -466,7 +463,7 @@ li.materials-description__item > * {
 
 @media screen and (min-width: 640px) {
   body {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1.5;
   }
 
