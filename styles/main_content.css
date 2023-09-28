@@ -150,7 +150,7 @@ img {
   display: flex;
   gap: 20px;
   padding: 0 5px;
-  overflow-x: scroll;
+  overflow: scroll;
   scroll-behavior: smooth;
 }
 
