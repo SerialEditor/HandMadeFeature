@@ -8,11 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  color: #000000;
-  background-color: #f3f1ef;
-}
-
 ul,
 ol {
   list-style-type: none;
@@ -20,10 +15,7 @@ ol {
 
 a, button {
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
   color: inherit;
-  cursor: pointer;
 }
 
 a {
@@ -39,16 +31,13 @@ button {
   border: none;
   border-radius: 0;
   outline: none;
-}
-
-a:focus,
-button:focus {
-  outline: none;
+  cursor: pointer;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
 }
 
 .bounding-container {

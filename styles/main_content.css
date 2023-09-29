@@ -3,7 +3,8 @@ body {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.45;
-  text-align: center;
+  color: #000000;
+  background-color: #f3f1ef;
 }
 
 section:nth-of-type(2n) {
@@ -17,6 +18,10 @@ h4,
 dt {
   font-family: 'Cormorant', 'Georgia', serif;
   text-transform: uppercase;
+}
+
+h2, h3, h4, a, button {
+  text-align: center;
 }
 
 h2 {
@@ -38,16 +43,11 @@ h3 {
 }
 
 p {
-  text-align: start;
   margin-bottom: 25px;
 }
 
 * p:last-child {
   margin-bottom: 0;
-}
-
-img {
-  border-radius: 12px;
 }
 
 .promo .bounding-container {
@@ -251,10 +251,6 @@ li.materials-description__item > * {
 
 .materials-description__item img:not(.material_image) {
   order: -1;
-}
-
-.wood-description {
-  text-align: start;
 }
 
 .wood-description__item:not(:last-child) {
