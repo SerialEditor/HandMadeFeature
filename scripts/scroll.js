@@ -1,11 +1,12 @@
-'use strict';
+"use strict";
 
-let container = document.querySelector('.outer-container');
-let scrollElems = container.querySelectorAll('.samples-item');
-let firstScrollElems = container.querySelectorAll('.samples-item:first-child');
-let tabScrollButtons = document.querySelectorAll('.sample-list-scroll-btn');
-let elemScrollButtonBack = document.querySelector('.scroll__btn--left');
-let elemScrollButtonForward = document.querySelector('.scroll__btn--right');
+let container = document.querySelector(".outer-container");
+let scrollElems = container.querySelectorAll(".samples-item");
+let firstScrollElems = container.querySelectorAll(".samples-item:first-child");
+let tabScrollButtons = document.querySelectorAll(".sample-list-scroll-btn");
+let elemScrollButtonBack = document.querySelector(".scroll__btn--left");
+let elemScrollButtonForward = document.querySelector(".scroll__btn--right");
+let scrollResultMessage = document.querySelector(".scroll-result");
 
 function filterIndices(search, selector) {
   if (!Array.isArray(search)) search = Array.from(search);
@@ -15,19 +16,19 @@ function filterIndices(search, selector) {
   }, []);
 }
 
-let firstElemNumbers = filterIndices(scrollElems, 'li:first-child');
+let firstElemNumbers = filterIndices(scrollElems, "li:first-child");
 
 let activeElem = {
   value: scrollElems[0],
   index: 0,
-  activeClass: 'active--item',
+  activeClass: "active--item",
   configureActiveElem: configureActiveObject,
 };
 
 let activeTabButton = {
   value: tabScrollButtons[0],
   index: 0,
-  activeClass: 'active--btn',
+  activeClass: "active--btn",
   configureActiveTabButton: configureActiveObject,
 };
 
@@ -40,14 +41,14 @@ function configureActiveObject(value, index) {
 
 function moveTo(elem) {
   elem.scrollIntoView({
-    block: 'nearest',
-    inline: 'center',
-    behavior: 'smooth',
+    block: "nearest",
+    inline: "center",
+    behavior: "smooth",
   });
 }
 
 tabScrollButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     if (activeElem.value === firstScrollElems[index]) return;
     let sequenceNumber = firstElemNumbers[index];
     if (activeTabButton.value !== button)
@@ -57,14 +58,14 @@ tabScrollButtons.forEach((button, index) => {
   });
 });
 
-elemScrollButtonForward.addEventListener('click', () => {
+elemScrollButtonForward.addEventListener("click", () => {
   if (activeElem.index === scrollElems.length - 1) return;
   activeElem.configureActiveElem(
     scrollElems[activeElem.index + 1],
     activeElem.index + 1
   );
   moveTo(activeElem.value);
-  if (activeElem.value.matches('li:first-child')) {
+  if (activeElem.value.matches("li:first-child")) {
     activeTabButton.configureActiveTabButton(
       tabScrollButtons[activeTabButton.index + 1],
       activeTabButton.index + 1
@@ -72,14 +73,14 @@ elemScrollButtonForward.addEventListener('click', () => {
   }
 });
 
-elemScrollButtonBack.addEventListener('click', () => {
+elemScrollButtonBack.addEventListener("click", () => {
   if (activeElem.index === 0) return;
   activeElem.configureActiveElem(
     scrollElems[activeElem.index - 1],
     activeElem.index - 1
   );
   moveTo(activeElem.value);
-  if (activeElem.value.matches('li:last-child')) {
+  if (activeElem.value.matches("li:last-child")) {
     activeTabButton.configureActiveTabButton(
       tabScrollButtons[activeTabButton.index - 1],
       activeTabButton.index - 1
@@ -88,10 +89,10 @@ elemScrollButtonBack.addEventListener('click', () => {
 });
 
 let x = null;
-container.addEventListener('touchstart', (evt) => {
+container.addEventListener("touchstart", (evt) => {
   x = evt.touches[0].clientX;
 });
-container.addEventListener('touchmove', (evt) => {
+container.addEventListener("touchmove", (evt) => {
   if (!x) return;
   if (x - evt.touches[0].clientX < 0) {
     if (activeElem.index === 0) return;
@@ -99,8 +100,13 @@ container.addEventListener('touchmove', (evt) => {
       scrollElems[activeElem.index - 1],
       activeElem.index - 1
     );
-    moveTo(activeElem.value);
-    if (activeElem.value.matches('li:last-child')) {
+    try {
+      moveTo(activeElem.value);
+      scrollResultMessage.textContent = "Succesfull!";
+    } catch {
+      scrollResultMessage.textContent = "Error!";
+    }
+    if (activeElem.value.matches("li:last-child")) {
       activeTabButton.configureActiveTabButton(
         tabScrollButtons[activeTabButton.index - 1],
         activeTabButton.index - 1
@@ -112,8 +118,13 @@ container.addEventListener('touchmove', (evt) => {
       scrollElems[activeElem.index + 1],
       activeElem.index + 1
     );
-    moveTo(activeElem.value);
-    if (activeElem.value.matches('li:first-child')) {
+    try {
+      moveTo(activeElem.value);
+      scrollResultMessage.textContent = "Succesfull!";
+    } catch (err) {
+      scrollResultMessage.textContent = "Error!";
+    }
+    if (activeElem.value.matches("li:first-child")) {
       activeTabButton.configureActiveTabButton(
         tabScrollButtons[activeTabButton.index + 1],
         activeTabButton.index + 1
