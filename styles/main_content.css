@@ -244,7 +244,11 @@ img {
 }
 
 .item-scroll-btns {
-  display: none;
+  .item-scroll-btns {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+  }
 }
 
 .item-scroll-btn {
