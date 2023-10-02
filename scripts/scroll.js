@@ -89,12 +89,12 @@ elemScrollButtonBack.onclick = function () {
 
 let x = null;
 container.addEventListener('touchstart', (evt) => {
-  x = evt.targetTouches[0].clientX;
+  x = evt.touches[0].clientX;
+  document.documentElement.classList.add('overflow--hidden');
 });
 container.addEventListener('touchmove', (evt) => {
   if (!x) return;
-  console.info(evt.targetTouches);
-  if (x - evt.targetTouches[0].clientX < 0) {
+  if (x - evt.changedTouches[0].clientX < 0) {
     elemScrollButtonBack.onclick();
     // if (activeElem.index === 0) return;
     // activeElem.configureActiveElem(
@@ -124,4 +124,7 @@ container.addEventListener('touchmove', (evt) => {
     // }
   }
   x = null;
+});
+container.addEventListener('touchend', () => {
+  document.documentElement.classList.remove('overflow--hidden');
 });
