@@ -375,19 +375,6 @@ li.materials-description__item > * {
   gap: 25px;
 }
 
-.scroll-result {
-  position: fixed;
-  top: 50vh;
-  left: 20px;
-  width: max-content;
-  padding: .5em 1em;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-  box-shadow: 0 0 0 5px #726876;
-  backdrop-filter: blur(10px);
-}
-
 .button-up {
   position: fixed;
   right: 10px;
