@@ -57,7 +57,7 @@ tabScrollButtons.forEach((button, index) => {
   });
 });
 
-elemScrollButtonForward.addEventListener('click', () => {
+elemScrollButtonForward.onclick = function () {
   if (activeElem.index === scrollElems.length - 1) return;
   activeElem.configureActiveElem(
     scrollElems[activeElem.index + 1],
@@ -70,9 +70,9 @@ elemScrollButtonForward.addEventListener('click', () => {
       activeTabButton.index + 1
     );
   }
-});
+};
 
-elemScrollButtonBack.addEventListener('click', () => {
+elemScrollButtonBack.onclick = function () {
   if (activeElem.index === 0) return;
   activeElem.configureActiveElem(
     scrollElems[activeElem.index - 1],
@@ -85,7 +85,7 @@ elemScrollButtonBack.addEventListener('click', () => {
       activeTabButton.index - 1
     );
   }
-});
+};
 
 let x = null;
 container.addEventListener('touchstart', (evt) => {
@@ -94,31 +94,33 @@ container.addEventListener('touchstart', (evt) => {
 container.addEventListener('touchmove', (evt) => {
   if (!x) return;
   if (x - evt.touches[0].clientX < 0) {
-    if (activeElem.index === 0) return;
-    activeElem.configureActiveElem(
-      scrollElems[activeElem.index - 1],
-      activeElem.index - 1
-    );
-    moveTo(activeElem.value);
-    if (activeElem.value.matches('li:last-child')) {
-      activeTabButton.configureActiveTabButton(
-        tabScrollButtons[activeTabButton.index - 1],
-        activeTabButton.index - 1
-      );
-    }
+    elemScrollButtonBack.onclick();
+    // if (activeElem.index === 0) return;
+    // activeElem.configureActiveElem(
+    //   scrollElems[activeElem.index - 1],
+    //   activeElem.index - 1
+    // );
+    // moveTo(activeElem.value);
+    // if (activeElem.value.matches('li:last-child')) {
+    //   activeTabButton.configureActiveTabButton(
+    //     tabScrollButtons[activeTabButton.index - 1],
+    //     activeTabButton.index - 1
+    //   );
+    // }
   } else {
-    if (activeElem.index === scrollElems.length - 1) return;
-    activeElem.configureActiveElem(
-      scrollElems[activeElem.index + 1],
-      activeElem.index + 1
-    );
-    moveTo(activeElem.value);
-    if (activeElem.value.matches('li:first-child')) {
-      activeTabButton.configureActiveTabButton(
-        tabScrollButtons[activeTabButton.index + 1],
-        activeTabButton.index + 1
-      );
-    }
+    elemScrollButtonForward.onclick();
+    // if (activeElem.index === scrollElems.length - 1) return;
+    // activeElem.configureActiveElem(
+    //   scrollElems[activeElem.index + 1],
+    //   activeElem.index + 1
+    // );
+    // moveTo(activeElem.value);
+    // if (activeElem.value.matches('li:first-child')) {
+    //   activeTabButton.configureActiveTabButton(
+    //     tabScrollButtons[activeTabButton.index + 1],
+    //     activeTabButton.index + 1
+    //   );
+    // }
   }
   x = null;
 });
