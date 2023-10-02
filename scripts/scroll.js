@@ -89,11 +89,12 @@ elemScrollButtonBack.onclick = function () {
 
 let x = null;
 container.addEventListener('touchstart', (evt) => {
-  x = evt.touches[0].clientX;
+  x = evt.targetTouches[0].clientX;
 });
 container.addEventListener('touchmove', (evt) => {
   if (!x) return;
-  if (x - evt.touches[0].clientX < 0) {
+  console.info(evt.targetTouches);
+  if (x - evt.targetTouches[0].clientX < 0) {
     elemScrollButtonBack.onclick();
     // if (activeElem.index === 0) return;
     // activeElem.configureActiveElem(
